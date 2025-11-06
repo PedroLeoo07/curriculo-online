@@ -1,0 +1,17 @@
+# Placeholder para o Currículo em PDF
+
+Para ativar o botão de download:
+
+1. Crie ou exporte seu currículo em PDF
+2. Renomeie o arquivo para: **curriculo-leonardo-oliveira.pdf**
+3. Substitua este arquivo na pasta `public`
+
+O botão "Download Currículo" no header do site irá baixar automaticamente este arquivo.
+
+## Dica:
+
+Você pode criar um PDF profissional usando:
+- Canva (https://canva.com)
+- Google Docs (exportar como PDF)
+- Microsoft Word (salvar como PDF)
+- Figma (exportar como PDF)
