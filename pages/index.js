@@ -17,7 +17,7 @@ export default function Home() {
         <meta name="keywords" content="desenvolvedor, full stack, javascript, react, node.js, portfolio" />
         <meta name="author" content="Leonardo Oliveira" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" type="image/svg+xml" />
       </Head>
 
       <div className={styles.container}>

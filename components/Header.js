@@ -16,6 +16,26 @@ export default function Header() {
     }
   }
 
+  const downloadPDF = () => {
+    // Carrega a biblioteca html2pdf dinamicamente
+    const script = document.createElement('script');
+    script.src = 'https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js';
+    script.onload = () => {
+      const element = document.querySelector('main');
+      const opt = {
+        margin: 10,
+        filename: 'curriculo-leonardo-oliveira.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2, useCORS: true },
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+      };
+      
+      // Gera o PDF
+      window.html2pdf().set(opt).from(element).save();
+    };
+    document.head.appendChild(script);
+  }
+
   return (
     <header className={styles.header}>
       <div className={styles.heroSection}>
@@ -25,30 +45,30 @@ export default function Header() {
         <h1 className={styles.name}>Leonardo Oliveira</h1>
         <h2 className={styles.title}>Desenvolvedor Full Stack</h2>
         
-        <div className={styles.contacts}>
-          <a href="tel:+5519988727143" className={styles.contactItem}>
+        <div className={styles.contactsGrid}>
+          <a href="tel:+5519988727143" className={styles.contactCard}>
             <i className="fas fa-phone"></i>
-            (19) 98872-7143
+            <span>(19) 98872-7143</span>
           </a>
-          <a href="mailto:leonardopedrodeoliveira07@gmail.com" className={styles.contactItem}>
+          <a href="mailto:leonardopedrodeoliveira07@gmail.com" className={styles.contactCard}>
             <i className="fas fa-envelope"></i>
-            leonardopedrodeoliveira07@gmail.com
+            <span>leonardopedrodeoliveira07@gmail.com</span>
           </a>
-          <a href="https://github.com/PedroLeoo07" target="_blank" rel="noopener noreferrer" className={styles.contactItem}>
+          <a href="https://github.com/PedroLeoo07" target="_blank" rel="noopener noreferrer" className={styles.contactCard}>
             <i className="fab fa-github"></i>
-            github.com/PedroLeoo07
+            <span>github.com/PedroLeoo07</span>
           </a>
-          <a href="https://linkedin.com/in/devleonardooliveira" target="_blank" rel="noopener noreferrer" className={styles.contactItem}>
+          <a href="https://linkedin.com/in/devleonardooliveira" target="_blank" rel="noopener noreferrer" className={styles.contactCard}>
             <i className="fab fa-linkedin"></i>
-            linkedin.com/in/devleonardooliveira
+            <span>linkedin.com/in/devleonardooliveira</span>
           </a>
         </div>
 
         <div className={styles.actions}>
-          <a href="/curriculo-leonardo-oliveira.pdf" download className={styles.btnDownload}>
+          <button onClick={downloadPDF} className={styles.btnDownload}>
             <i className="fas fa-download"></i>
-            Download Currículo
-          </a>
+            Download PDF
+          </button>
           <a href="mailto:leonardopedrodeoliveira07@gmail.com" className={styles.btnContact}>
             <i className="fas fa-paper-plane"></i>
             Entrar em Contato

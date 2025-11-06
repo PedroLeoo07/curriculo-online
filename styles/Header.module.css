@@ -45,40 +45,51 @@
 .title {
   font-size: 1.5rem;
   font-weight: 400;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   opacity: 0.95;
   animation: fadeIn 1.2s ease-out;
 }
 
-.contacts {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  justify-content: center;
-  margin-bottom: 2rem;
+.contactsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  max-width: 900px;
+  margin: 0 auto 2.5rem;
   animation: fadeIn 1.4s ease-out;
 }
 
-.contactItem {
+.contactCard {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.6rem 1.2rem;
-  background: rgba(255, 255, 255, 0.15);
-  border-radius: 25px;
+  gap: 0.8rem;
+  padding: 1rem 1.5rem;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
   transition: all 0.3s ease;
-  font-size: 0.9rem;
-  backdrop-filter: blur(5px);
+  font-size: 0.95rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.contactItem:hover {
-  background: rgba(255, 255, 255, 0.25);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+.contactCard:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
-.contactItem i {
-  font-size: 1.1rem;
+.contactCard i {
+  font-size: 1.3rem;
+  min-width: 24px;
+  text-align: center;
+}
+
+.contactCard span {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .actions {
@@ -101,6 +112,8 @@
   transition: all 0.3s ease;
   cursor: pointer;
   border: 2px solid transparent;
+  font-family: inherit;
+  text-decoration: none;
 }
 
 .btnDownload {
@@ -172,14 +185,19 @@
     font-size: 1.2rem;
   }
 
-  .contacts {
-    flex-direction: column;
-    align-items: stretch;
+  .contactsGrid {
+    grid-template-columns: 1fr;
     gap: 0.8rem;
+    padding: 0 1rem;
   }
 
-  .contactItem {
-    justify-content: center;
+  .contactCard {
+    padding: 0.9rem 1.2rem;
+    font-size: 0.85rem;
+  }
+
+  .contactCard i {
+    font-size: 1.1rem;
   }
 
   .actions {
