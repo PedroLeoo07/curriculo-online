@@ -1,17 +1,13 @@
 .section {
   background: #1a1a1a;
-  border-radius: 16px;
+  border-radius: 8px;
   padding: 2.5rem;
   margin-bottom: 2rem;
-  box-shadow: 0 4px 6px rgba(220, 38, 38, 0.2);
-  transition: all 0.3s ease;
-  animation: fadeIn 0.6s ease-out;
   border: 1px solid #333333;
 }
 
 .section:hover {
-  box-shadow: 0 8px 16px rgba(220, 38, 38, 0.3);
-  transform: translateY(-4px);
+  border-color: #dc2626;
 }
 
 .sectionHeader {
@@ -54,22 +50,21 @@
   gap: 2rem;
   margin-bottom: 2rem;
   padding-bottom: 2rem;
-  border-left: 3px solid #333333;
+  border-left: 2px solid #333333;
   padding-left: 2rem;
   position: relative;
-  animation: slideInLeft 0.5s ease-out;
 }
 
 .timelineItem::before {
   content: '';
   position: absolute;
-  left: -9px;
+  left: -6px;
   top: 0;
-  width: 15px;
-  height: 15px;
+  width: 10px;
+  height: 10px;
   background: #dc2626;
   border-radius: 50%;
-  box-shadow: 0 0 0 4px #1a1a1a, 0 0 0 6px #dc2626;
+  border: 2px solid #1a1a1a;
 }
 
 .timelineItem:last-child {
@@ -114,10 +109,6 @@
   gap: 3rem;
 }
 
-.skillsColumn {
-  animation: fadeIn 0.8s ease-out;
-}
-
 .skillsTitle {
   display: flex;
   align-items: center;
@@ -126,7 +117,7 @@
   color: #ffffff;
   margin-bottom: 1.5rem;
   padding-bottom: 0.8rem;
-  border-bottom: 2px solid #333333;
+  border-bottom: 1px solid #333333;
 }
 
 .skillsTitle i {
@@ -155,19 +146,13 @@
   background: #dc2626;
   color: white;
   padding: 0.5rem 1rem;
-  border-radius: 20px;
+  border-radius: 4px;
   font-size: 0.9rem;
   font-weight: 500;
-  transition: all 0.3s ease;
-  animation: fadeIn 1s ease-out;
-  border: 1px solid #dc2626;
 }
 
 .skillTag:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(220, 38, 38, 0.4);
   background: #b91c1c;
-  animation: pulse 0.5s ease;
 }
 
 .softSkillsList {
@@ -180,14 +165,11 @@
   gap: 0.8rem;
   padding: 0.8rem;
   margin-bottom: 0.5rem;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-  animation: slideInRight 0.6s ease-out;
+  border-radius: 4px;
 }
 
 .softSkillsList li:hover {
   background: #333333;
-  transform: translateX(8px);
 }
 
 .softSkillsList li i {
@@ -196,9 +178,7 @@
 }
 
 /* Experience */
-.experienceItem {
-  animation: fadeIn 0.8s ease-out;
-}
+
 
 .experienceHeader {
   display: flex;
@@ -282,17 +262,13 @@
 .projetoCard {
   background: #1a1a1a;
   padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(220, 38, 38, 0.2);
-  transition: all 0.3s ease;
-  border-left: 4px solid #dc2626;
-  animation: fadeIn 1s ease-out;
+  border-radius: 6px;
+  border-left: 3px solid #dc2626;
   border: 1px solid #444444;
 }
 
 .projetoCard:hover {
-  box-shadow: 0 8px 16px rgba(220, 38, 38, 0.3);
-  transform: translateY(-5px);
+  border-color: #dc2626;
 }
 
 .projetoHeader {

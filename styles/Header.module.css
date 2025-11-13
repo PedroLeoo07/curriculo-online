@@ -1,8 +1,7 @@
 .header {
-  background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+  background: #1a1a1a;
   color: white;
-  box-shadow: 0 4px 6px rgba(220, 38, 38, 0.3);
-  animation: slideInLeft 0.5s ease-out;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .heroSection {
@@ -16,11 +15,9 @@
   width: 180px;
   height: 180px;
   margin: 0 auto 1.5rem;
-  animation: fadeIn 0.8s ease-out;
   border-radius: 50%;
   overflow: hidden;
-  border: 5px solid #dc2626;
-  box-shadow: 0 8px 24px rgba(220, 38, 38, 0.5);
+  border: 3px solid #dc2626;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -38,16 +35,13 @@
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  animation: fadeIn 1s ease-out;
 }
 
 .title {
   font-size: 1.5rem;
   font-weight: 400;
   margin-bottom: 3rem;
-  opacity: 0.95;
-  animation: fadeIn 1.2s ease-out;
+  opacity: 0.9;
 }
 
 .contactsGrid {
@@ -56,7 +50,6 @@
   gap: 1rem;
   max-width: 900px;
   margin: 0 auto 2.5rem;
-  animation: fadeIn 1.4s ease-out;
 }
 
 .contactCard {
@@ -64,19 +57,14 @@
   align-items: center;
   gap: 0.8rem;
   padding: 1rem 1.5rem;
-  background: rgba(255, 255, 255, 0.12);
-  border-radius: 12px;
-  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
   font-size: 0.95rem;
-  backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .contactCard:hover {
-  background: rgba(255, 255, 255, 0.2);
-  transform: translateY(-3px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
-  border-color: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.15);
 }
 
 .contactCard i {
@@ -97,7 +85,6 @@
   gap: 1rem;
   justify-content: center;
   flex-wrap: wrap;
-  animation: fadeIn 1.6s ease-out;
 }
 
 .btnDownload,
@@ -106,10 +93,9 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.8rem 1.8rem;
-  border-radius: 30px;
+  border-radius: 6px;
   font-weight: 600;
   font-size: 1rem;
-  transition: all 0.3s ease;
   cursor: pointer;
   border: 2px solid transparent;
   font-family: inherit;
@@ -119,13 +105,10 @@
 .btnDownload {
   background: #dc2626;
   color: white;
-  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
 }
 
 .btnDownload:hover {
   background: #b91c1c;
-  transform: translateY(-3px);
-  box-shadow: 0 6px 16px rgba(220, 38, 38, 0.4);
 }
 
 .btnContact {
@@ -137,7 +120,6 @@
 .btnContact:hover {
   background: #dc2626;
   color: white;
-  transform: translateY(-3px);
 }
 
 .nav {
@@ -145,12 +127,11 @@
   justify-content: center;
   gap: 0.5rem;
   padding: 1rem 2rem;
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.2);
   flex-wrap: wrap;
   position: sticky;
   top: 0;
   z-index: 1000;
-  backdrop-filter: blur(10px);
 }
 
 .navLink {
@@ -161,14 +142,12 @@
   cursor: pointer;
   font-size: 0.95rem;
   font-weight: 500;
-  border-radius: 20px;
-  transition: all 0.3s ease;
+  border-radius: 4px;
   font-family: inherit;
 }
 
 .navLink:hover {
-  background: rgba(255, 255, 255, 0.2);
-  transform: translateY(-2px);
+  background: rgba(220, 38, 38, 0.2);
 }
 
 @media (max-width: 768px) {
